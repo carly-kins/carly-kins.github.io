@@ -35,7 +35,7 @@ const Footer = ( ) => {
 					) )}
 				</ul>
 				<div className="time d-none d-md-grid">
-					<time className="clock">{currentTime}</time>
+					<time className="clock" aria-hidden="true">{currentTime}</time>
 				</div>
 			</footer>
 		</>

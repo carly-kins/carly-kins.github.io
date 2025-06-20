@@ -1,0 +1,11 @@
+$block: 'logo-grid';
+
+@include media-breakpoint-up(md) { 
+	.#{$block} {
+		&__item {
+			$max-width: 33%;
+			$gap: calc($gutter * 2);
+			width: calc($max-width - $gap);
+		}
+	}
+}

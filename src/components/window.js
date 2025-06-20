@@ -30,7 +30,8 @@ const Window = ( ) => {
 				</nav>
 				<div className="window-content">
 					<div className="information-container">
-						<div className="information" dangerouslySetInnerHTML={{__html: windowHtml}}>
+						{/*eslint-disable-next-line react/no-unknown-property*/}
+						<div className="information" tabindex="0" dangerouslySetInnerHTML={{__html: windowHtml}}>
 						</div>
 					</div>
 				</div>

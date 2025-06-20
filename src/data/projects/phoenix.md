@@ -3,8 +3,7 @@ slug: phoenix
 type: 'project'
 project:
     title: Phoenix
-    projectLink: www.example.com
-    githubLink: www.example.com
+    projectLink: https://www.phoenix.gov/
     logo: ''
     highlight: true
     skills: 
