@@ -36,6 +36,8 @@ Right now, my artwork is not on this site, but it will be soon! If you are inter
 - Create filtering functionality for all projects/artworks
 - Create build for pages for individual projects 
 - Refine hero
+- Add analyitics
+- Handle titles in <head> 
 
 ### Credits: 
 The following was referenced to create some effects. 
