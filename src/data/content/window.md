@@ -26,7 +26,6 @@ Right now, my artwork is not on this site, but it will be soon! If you are inter
 - Refine hero
 - Add analyitics
 - Handle titles in <head> 
-- Update readme
 - Fix build process - figure out a way to remove some dependencies that are depreciated or no longer supported
 
 ### Credits: 
