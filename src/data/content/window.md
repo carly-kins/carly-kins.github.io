@@ -20,6 +20,7 @@ Right now, my artwork is not on this site, but it will be soon! If you are inter
 ### TODOS
 
 - Migrate artworks from old portfolio
+- Setup custom DNS
 - Create filtering functionality for all projects/artworks
 - Create build for pages for individual projects 
 - Refine hero

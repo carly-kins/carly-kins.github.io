@@ -3,6 +3,10 @@ $block: 'navbar';
 @include media-breakpoint-up(md) { 
 	.#{$block} {
 
+		&:before {
+			background: linear-gradient(0deg,rgba($background-color, 0) 0%, rgba($background-color, 1) 100%);
+		}
+
 		.button {
 			position: static;
 			margin-top: spacing(sm);
