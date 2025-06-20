@@ -38,6 +38,7 @@ exports.createSchemaCustomization = ( { actions } ) => {
 			description: String
 			id: String
 			cta: Button
+			logoGridTitle: String
 			logoGrid: [LogoItem]
 		}
 

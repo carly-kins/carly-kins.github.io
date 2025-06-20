@@ -25,7 +25,7 @@ const CardText = ( {card} ) => {
 			</p>
 			<p className='project-cards__text' dangerouslySetInnerHTML={{ __html: cardInfo.description }}></p>
 			<div className='project-cards__footer'>
-				{ cardInfo.link || cardInfo.githubLink ? 
+				{ cardInfo.projectLink || cardInfo.githubLink ? 
 					<div className='project-cards__footer'>
 						{ cardInfo.projectLink ? <Button link={cardInfo.projectLink} text={'Visit Site'} visuallyHidden={true} type={'external'} icon={true} /> : ''}
 						{ cardInfo.githubLink ? <Button link={cardInfo.githubLink} text={'Visit Github'} visuallyHidden={true} type={'github'} icon={true} />: ''}
