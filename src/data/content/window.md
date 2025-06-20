@@ -12,9 +12,9 @@ I was inspired by a lot of 90's and early 2000's websites. The excitement around
 Right now, my artwork is not on this site, but it will be soon! If you are interested in my visual art, check out [my old portfolio](https://www.carlyannewooten.com/gallery).
 
 ### Specs 
-- Gatsby.js static site hosted on Github pages
 - [Repo](https://github.com/carly-kins/carly-kins.github.io)
-- Styling - SCSS 
+- [Gatsby.js](https://www.gatsbyjs.com/) static site hosted on Github pages
+- Styling - custom SCSS on top of [Bootstrap 5](https://getbootstrap.com/) 
 - Authoring - [Gatsby Markdown Remark](https://www.gatsbyjs.com/plugins/gatsby-transformer-remark/)
 
 ### TODOS
@@ -26,6 +26,7 @@ Right now, my artwork is not on this site, but it will be soon! If you are inter
 - Refine hero
 - Add analyitics
 - Handle titles in <head> 
+- Update readme
 
 ### Credits: 
 The following was referenced to create some effects. 

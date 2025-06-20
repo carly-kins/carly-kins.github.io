@@ -72,7 +72,7 @@ $spacing: (
 	'5xl': rem-calc(36),
 	'6xl': rem-calc(40)
 );
-$vertical-spacing: calc(spacing('6xl') * 1.75);
+$vertical-spacing: calc(spacing('6xl') * 2);
 $component-spacing: spacing('4xl');
 $header-spacing: spacing('2xl');
 $gutter: calc(spacing('2xl') * .5); // imports before bootstrap variables, so duplicating here for ease of use
@@ -103,5 +103,5 @@ $h5-font-size: rem-calc($font-size-base * 1.25);
 $h6-font-size: rem-calc($font-size-base );
 
 $focus-ring-box-shadow: 0 0 0 .25rem rgba($link-hover, .75);
-$hero-height: 72vh;
+$hero-height: 100vh;
 $hero-min-height: 500px;

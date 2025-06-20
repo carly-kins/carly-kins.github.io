@@ -1,8 +1,6 @@
 @use 'sass:map';
 @use 'sass:math';
 
-
-
 // https://gist.github.com/olefredrik/e2e5822013c2a027e3b57cf21c8f4a48
 @function rem-calc($size, $base-size: 16) {
 	$rem-size: math.div($size, $base-size);
@@ -53,7 +51,7 @@
 			position: absolute;
 			display: block;
 			height: $height;
-			min-height: $min-height;
+			min-height: 500px;
 			background: rgb(18 16 16 / 10%);
 			content: ' ';
 			opacity: 0;

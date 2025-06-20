@@ -3,11 +3,6 @@ $block: 'section';
 	position: relative;
 	z-index: 999;
 
-	&--about {
-		top: calc($vertical-spacing * -1 * 2);
-		margin-bottom: calc($vertical-spacing * -1 * 2);
-	}
-
 	&-header {
 		margin-bottom: 0;
 
