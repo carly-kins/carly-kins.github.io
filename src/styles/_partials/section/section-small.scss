@@ -1,0 +1,25 @@
+$block: 'section';
+.#{$block} {
+	position: relative;
+	z-index: 999;
+
+	&--about {
+		top: calc($vertical-spacing * -1 * 2);
+		margin-bottom: calc($vertical-spacing * -1 * 2);
+	}
+
+	&-header {
+		margin-bottom: 0;
+
+		&__wrap {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			margin-bottom: $header-spacing;
+		}
+	}
+
+	&-description {
+		margin-bottom: $vertical-spacing;
+	}
+}

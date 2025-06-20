@@ -1,0 +1,52 @@
+$block: 'logo-grid';
+.#{$block} {
+	margin-bottom: $vertical-spacing;
+
+	p {
+		margin-bottom: 0;
+
+	}
+
+	&--wrap {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+		gap: calc($gutter * 2);
+	}
+
+	&__heading {
+		margin-bottom:  $header-spacing;
+
+	}
+
+	&__item {
+		font-family: $font-family-secondary;
+		text-align: center;
+	}
+
+	&__image {
+		position: relative;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		padding: spacing('md');
+		border-radius: 12px;
+		background-color: $white;
+
+	
+		picture,
+		img {
+			position: absolute;
+			inset: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: scale-down;
+		}
+		
+	}
+
+	&__description {
+		margin-top: 0.5rem;
+		color: $surface0;
+		font-size: 0.85rem;
+	}
+}

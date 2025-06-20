@@ -1,0 +1,101 @@
+$block: 'button';
+// TODO: https://codepen.io/cbp/pen/RaEOaj/ hover state that is like this! 
+
+.#{$block} {
+	&.btn {
+		@include focus-state;
+
+		&-primary {
+			height: fit-content;
+			padding: rem-calc(10) rem-calc(15);
+			transition: background-color 0.3s linear;
+			border: 0;
+			border-radius: 1000px;
+			background-color: $lavender;
+			color: $crust;
+			font-size: $font-size-small;
+			font-weight: fw('bold');
+
+			&:hover,
+			&:focus,
+			&:focus-visible {
+				border-radius: 1000px;
+				background-color: $link-hover;
+				color: $white;
+			}
+
+		}
+
+		&-window {
+			@include bt(3px, button);
+			display: flex;
+			align-items: center;
+			height: fit-content;
+			padding: rem-calc(8) !important;
+			border: 0;
+			border-radius: 0;
+			background: none;
+			text-align: center;
+			appearance: none;
+
+			> span {
+				display: block;
+				width: 100%;
+				border: 1px dotted transparent;
+			}
+
+			&:focus,
+			&:hover {
+				@include bt(3px, button-strong);
+
+				span {
+					border-color: $bl;
+					background: none;
+					color: $bl;
+				}
+			}
+		}
+
+		&-github,
+		&-external,
+		&-linkedin,
+		&-threads {
+			width: rem-calc(50);
+			height: rem-calc(50);
+			padding: spacing(sm);
+
+			svg {
+				fill: $text-color;
+			}
+
+			&:hover,
+			&:focus,
+			&:focus-visible {
+				svg {
+					fill: $link-hover;
+				}
+			}
+
+			&:has(.visible) {
+				align-items: center;
+				width: auto;
+				height: auto;
+				gap: 8px;
+
+				.#{$block}__svg {
+					position: relative;
+					width: rem-calc(20);
+					height: rem-calc(20);
+
+					svg {
+						position: absolute;
+						inset: 0;
+						object-fit: cover;
+					}
+				}
+			}
+		}
+
+
+	}
+}

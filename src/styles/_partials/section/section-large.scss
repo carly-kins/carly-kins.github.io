@@ -1,0 +1,20 @@
+$block: 'section';
+
+@include media-breakpoint-up(lg) { 
+	.#{$block} {
+		&--about {
+			.#{$block}-header__wrap {
+				margin-top: $vertical-spacing;
+
+				h2 {
+					width: 100%;
+					text-align: center;
+				}
+			}
+
+			.#{$block}-header__about {
+				margin-left: $component-spacing;
+			}
+		}
+	}
+}

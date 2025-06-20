@@ -1,0 +1,154 @@
+@use 'sass:map';
+@use 'sass:math';
+
+
+
+// https://gist.github.com/olefredrik/e2e5822013c2a027e3b57cf21c8f4a48
+@function rem-calc($size, $base-size: 16) {
+	$rem-size: math.div($size, $base-size);
+
+	@return #{$rem-size}rem;
+}
+
+@function fw($weight) {
+	@return map.get($font-weights, $weight);
+}
+
+@function spacing($space) {
+	@return map.get($spacing, $space);
+}
+
+@mixin focus-state() {
+	&:focus-visible {
+		transition: box-shadow 0.1s linear;
+		border-radius: $border-radius-sm;
+		outline: 0;
+		box-shadow: $focus-ring-box-shadow;
+	}
+}
+
+@mixin crt( $height, $min-height ) {
+	.crt {
+		position: absolute;
+		height: $height;
+		min-height: $min-height;
+		opacity: .5;
+		inset: 0;
+
+		&:before {
+			position: absolute;
+			display: block;
+			height: $height;
+			min-height: $min-height;
+			background: linear-gradient(rgb(18 16 16 / 0%) 50%, rgb(0 0 0 / 25%) 50%), linear-gradient(90deg, rgb(255 0 0 / 6%), rgb(0 255 0 / 2%), rgb(0 0 255 / 6%));
+			background-size: 100% 2px, 3px 100%;
+			content: ' ';
+			z-index: 2;
+			inset: 0;
+			pointer-events: none;
+
+		}
+
+		&:after {
+			position: absolute;
+			display: block;
+			height: $height;
+			min-height: $min-height;
+			background: rgb(18 16 16 / 10%);
+			content: ' ';
+			opacity: 0;
+			z-index: 2;
+			inset: 0;
+			pointer-events: none;
+		}
+	}
+}
+
+// todo: consolodate with above
+@mixin crt-overlay() {
+	&:before {
+		position: absolute;
+		display: block;
+		background: linear-gradient(rgb(18 16 16 / 0%) 50%, rgb(0 0 0 / 25%) 50%), linear-gradient(90deg, rgb(255 0 0 / 6%), rgb(0 255 0 / 2%), rgb(0 0 255 / 6%));
+		background-size: 100% 2px, 3px 100%;
+		content: ' ';
+		z-index: 2;
+		inset: 0;
+		pointer-events: none;
+	}
+
+	&:after {
+		position: absolute;
+		display: block;
+		background: rgb(18 16 16 / 10%);
+		content: ' ';
+		opacity: 0;
+		z-index: 2;
+		inset: 0;
+		pointer-events: none;
+	}
+
+}
+
+// mixins for windows 95 effect https://codepen.io/gabriellewee/pen/MWqRZzp?editors=1100
+
+$black: #000;
+$white: #fff;
+$surface2-latte: #acb0be;
+$surface1-latte: #bcc0cc;
+$surface0-latte: #ccd0da;
+
+$g1: $surface1-latte; $g2: $surface0-latte; $g3: $surface2-latte; $wh: $white; $bl: $black; $bg: $white;
+
+@mixin ch($c: $g2, $s: 1px, $b: $wh) {
+	background-color: $b;
+	background-image: linear-gradient(45deg, $c 25%, transparent 25%, transparent 75%, $c 75%, $c), 
+		linear-gradient(45deg, $c 25%, transparent 25%, transparent 75%, $c 75%, $c);
+	background-position: 0 0, $s $s;
+	background-size: $s*2 $s*2;
+}
+
+@mixin bt($w, $d: default, $c: true) {
+	@include sh($w, $d);
+
+	@if $c == true {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding-bottom: $w*.5;
+	} @else {
+		padding: $w*2;
+	}
+	background: $g2;
+	z-index: 4;
+}
+
+@mixin sh($w, $d: default) {
+	@if $d == default {
+		box-shadow: inset #{-$w*.5} #{-$w*.5} 0 0 $bl, inset #{$w*.5} #{$w*.5} 0 0 $wh, inset #{-$w} #{-$w} 0 0 $g3, inset $w $w 0 0 $g1;
+	} @else if $d == window {
+		box-shadow: inset #{-$w*.5} #{-$w*.5} 0 0 $bl, inset #{$w*.5} #{$w*.5} 0 0 $g1, inset #{-$w} #{-$w} 0 0 $g3, inset $w $w 0 0 $wh;
+	} @else if $d == button {
+		padding-right: $w*.5;
+		padding-bottom: $w*.5;
+		box-shadow: inset #{-$w*.5} #{-$w*.5} 0 0 $bl, inset #{$w*.5} #{$w*.5} 0 0 $wh, inset #{-$w} #{-$w} 0 0 $g3, inset $w $w 0 0 $g2;
+	} @else if $d == button-reverse {
+		padding-right: $w*.5;
+		padding-bottom: $w*.5;
+		box-shadow: inset #{-$w*.5} #{-$w*.5} 0 0 $wh, inset #{$w*.5} #{$w*.5} 0 0 $bl, inset #{-$w} #{-$w} 0 0 $g2, inset $w $w 0 0 $g3;
+	} @else if $d == button-strong {
+		padding-bottom: $w*.5;
+		box-shadow: inset #{-$w} #{-$w} 0 0 $bl, inset #{$w*.5} #{$w*.5} 0 0 $bl, inset #{-$w*1.5} #{-$w*1.5} 0 0 $g3, inset $w $w 0 0 $wh;
+	} @else if $d == button-strong-pressed {
+		padding-bottom: $w*.5;
+		box-shadow: inset #{-$w*.5} #{-$w*.5} 0 0 $bl, inset #{$w*.5} #{$w*.5} 0 0 $bl, inset #{-$w} #{-$w} 0 0 $g3, inset $w $w 0 0 $g3;
+	} @else if $d == inset {
+		box-shadow: inset #{-$w*.5} #{-$w*.5} 0 0 $wh, inset #{$w*.5} #{$w*.5} 0 0 $g3;
+	} 
+}
+
+@mixin nb {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
