@@ -4,6 +4,8 @@ $block: hero;
 	.#{$block} {
 
 		.gatsby-image-wrapper {
+			background: linear-gradient(180deg,rgba($black, 0) 0%, rgba($background-color, 1) 80%);
+
 			picture {
 				left: 15%;
 	

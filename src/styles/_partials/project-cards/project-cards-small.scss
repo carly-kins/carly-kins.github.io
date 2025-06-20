@@ -16,14 +16,14 @@ $block: 'project-cards';
 	} 
 
 	&__card {
+		@include sh(3px, default);
 		display: flex;
 		flex-direction: column;
 		margin-bottom: $component-spacing;
-		gap: $gutter;
-		border-radius: 12px;
+		padding: 3px;
 		background-color: $white;
-		box-shadow: rgb(99 99 99 / 20%) 0 2px 8px 0;
-		overflow: clip;;
+		overflow: clip;
+		gap: $gutter;
 	}
 
 	&__text {

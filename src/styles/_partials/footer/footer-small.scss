@@ -1,23 +1,40 @@
 $block: 'footer';
 .#{$block} {
+	position: sticky;
+	bottom: 0;
 	margin-top: $vertical-spacing;
+	z-index: 999;
 
 	.container{
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+	}
 
+	.#{$block}-nav {
+		display: flex; 
+		align-items: center;
 	}
 
 	ul { 
 		display: flex; 
 		align-items: center;
-		margin: 0;
+		justify-content: center;
+		width: 100%;
+		margin-bottom: 0;
+		margin-left: $gutter;
 		padding: 0;
 		list-style: none;
 
+		// TODO: move out into own file
+		@include media-breakpoint-up(md) { 
+			width: fit-content;
+		}
+
 		a {
-			height: rem-calc(40) !important;
+			/* stylelint-disable-next-line declaration-no-important */
+			height: rem-calc(44) !important;
+			/* stylelint-disable-next-line declaration-no-important */
 			padding: 5px 8px !important;
 			border-radius: 0;
 			margin-inline: 2px;
@@ -39,21 +56,26 @@ $block: 'footer';
 		display: flex;
 		align-items: center;
 		width: 100%;
-		height: 44px;
+		height: rem-calc(70);
 		padding-top: 3px;
 		background-color: $g2;
 		box-shadow: inset 0 1.5px 0 0 $g2, inset 0 3px 0 0 $wh;
-		z-index: 10;
+		z-index: 999;
+		// TODO: move out into own file
+		@include media-breakpoint-up(md) { 
+			height: rem-calc(60);
+		}
 
 		.time {
 			@include nb;
 			@include sh(3px, inset);
 			display: grid;
 			width: 100px;
-			height: 34px;
+			height: rem-calc(44);
 			margin: 0 3px;
-			place-items: center;
+			margin-right: $gutter;
 			margin-left: auto;
+			place-items: center;
 		}
 	}
 }

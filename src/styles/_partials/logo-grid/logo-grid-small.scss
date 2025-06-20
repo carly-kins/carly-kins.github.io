@@ -1,6 +1,7 @@
 $block: 'logo-grid';
 .#{$block} {
 	margin-bottom: $vertical-spacing;
+	$gap: calc($gutter * 2);
 
 	p {
 		margin-bottom: 0;
@@ -8,9 +9,10 @@ $block: 'logo-grid';
 	}
 
 	&--wrap {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-		gap: calc($gutter * 2);
+		display: flex;
+		flex-wrap: wrap;
+		gap: $gap;
+		justify-content: center;
 	}
 
 	&__heading {
@@ -19,6 +21,8 @@ $block: 'logo-grid';
 	}
 
 	&__item {
+		$max-width: 50%;
+		width: calc($max-width - $gap);
 		font-family: $font-family-secondary;
 		text-align: center;
 	}
@@ -29,8 +33,6 @@ $block: 'logo-grid';
 		width: 100%;
 		margin: 0 auto;
 		padding: spacing('md');
-		border-radius: 12px;
-		background-color: $white;
 
 	
 		picture,

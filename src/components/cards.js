@@ -42,7 +42,6 @@ const Cards = ( {cards, title, description} ) => {
 			{ title ? <h2>{title}</h2> : '' }
 			{ description ? <p>{description}</p> : '' }
 			<ul className='project-cards__cards'>
-				{console.log(cards)}
 				{ cards.map( ( card, index ) => {
 					{/*Switch back and forth even and odd cards */}
 					card = card.node.frontmatter;
