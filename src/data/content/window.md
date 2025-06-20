@@ -3,20 +3,7 @@ title: welcome.exe
 link: ''
 linkText: 'Download Resume'
 ---
-```
-                  .----.
-      .---------. | == |
-      |.-"""""-.| |----|
-      ||       || | == |
-      ||       || |----|
-      |'-.....-'| |::::|
-      `"")---(""` |___.|
-     /:::::::::::\" _  "
-    /:::=======:::\`\`\
-```
-### My Portfolio
-
-Welcome to my portfolio! `ʕっ•ᴥ•ʔっ`
+Welcome to my portfolio!
 
 This page/website is a work in progress, and will be a space to show off my work on my little corner of the web. I have a lot of ideas of what I want to do to improve the experience, but I wanted to get something launched -- this is just the first step! 
 
