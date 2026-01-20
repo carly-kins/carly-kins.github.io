@@ -16,11 +16,12 @@ $block: 'project-cards';
 	} 
 
 	&__card {
-		@include sh(3px, default);
+		// ADD BOX SHADOW
+		//@include sh(3px, default);
 		display: flex;
 		flex-direction: column;
 		margin-bottom: $component-spacing;
-		padding: 3px;
+		//padding: 3px;
 		background-color: $white;
 		overflow: clip;
 		gap: $gutter;

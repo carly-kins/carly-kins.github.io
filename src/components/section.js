@@ -20,14 +20,12 @@ const Section = ( { children, section, } ) => {
 			<section className={ section.id === 'about' ? 'section section--about' : 'section' }>
 				{section.id === 'about' ? 
 					<div className='row'>
-						<div className='col-12 col-lg-6'>
+						{/* <div className='col-12 col-lg-6'>
 							<Window/>
-						</div>
-						<div className='col-12 col-lg-6'>
-							<div className='section-header__about'>
+						</div> */}
+						<div className='section-header__about'>
 								<SectionHeader section={section}/>
 							</div>
-						</div>
 					</div>
 					:
 					<SectionHeader section={section}/>

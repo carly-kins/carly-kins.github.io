@@ -1,5 +1,6 @@
 @use 'sass:map';
 @use 'sass:math';
+@use '../_global/variables.scss' as *;
 
 // https://gist.github.com/olefredrik/e2e5822013c2a027e3b57cf21c8f4a48
 @function rem-calc($size, $base-size: 16) {
@@ -89,14 +90,7 @@
 }
 
 // mixins for windows 95 effect https://codepen.io/gabriellewee/pen/MWqRZzp?editors=1100
-
-$black: #000;
-$white: #fff;
-$surface2-latte: #acb0be;
-$surface1-latte: #bcc0cc;
-$surface0-latte: #ccd0da;
-
-$g1: $surface1-latte; $g2: $surface0-latte; $g3: $surface2-latte; $wh: $white; $bl: $black; $bg: $white;
+$g1: $surface1-latte; $g2: $background-color; $g3: $surface2-latte; $wh: $white; $bl: $black; $bg: $white;
 
 @mixin ch($c: $g2, $s: 1px, $b: $wh) {
 	background-color: $b;

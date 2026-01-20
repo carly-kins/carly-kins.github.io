@@ -2,7 +2,7 @@
 hero: 
     heading: Carly Wooten Gall
     subheading: "front-end developer. artist."
-    img: ../../images/homepage-hero.png
+    img: ../../images/homepage-hero-2.png
     alt: A watercolor of lilies and lavender
 alert: 
     description: I am in the process of migrating my visual art portfolio to this page. If you are interested in my artwork, please check out <a href='https://www.carlyannewooten.com/gallery'>My Portfolio</a>. If you are interested in what I plan to add to this site in the coming months check out GITHUB LINK.
@@ -42,3 +42,14 @@ sections:
   - heading: Featured Projects 
     id: "projects"
 ---
+
+My name is Carly, and I am a Front-End Engineer and Artist.
+
+Previously, I was a Digital Project Manager, but I missed _creating_ something as I worked. I quickly fell in love with code after seeing the incredible products that my colleagues were making on the web. Through self-study and on the job training, I transitioned to being a developer in 2022. 
+
+When working, I strive to fulfill 3 main principles: 
+- *Artisinal Coding*: I see development as an extenstion of my art practice. I love to create things and solve problems, whether I'm using paint or code. 
+- *Commitment to Accessibility*: The things I make should be accessible to as many people as possible. 
+- *Collaboration*: I am continually learning as I work - the best way to learn is to work with other people 
+
+Please enjoy my little corner of the internet! 

@@ -1,0 +1,80 @@
+$block: hero;
+
+.#{$block} { 
+	$window-nav-height: 1.75rem;
+
+	.window {
+		margin: 0;
+
+		&.window-picture {
+			position: relative;
+			max-width: 750px;
+			height: 60vh;
+			margin-left: auto;
+
+			.window-inside {
+				height: calc(100% - $window-nav-height);
+				overflow: visible;
+			}
+
+            
+			.window-content {
+				//position: relative;
+				height: 100%;
+			}
+		}
+
+		&.window-title {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	
+
+	
+
+	&__wrap {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: fit-content;
+		height: 90%;
+		pointer-events: none;
+	}
+
+	.gatsby-image-wrapper,
+	.glitch {
+		height: 100%;
+		overflow: visible;
+
+		img {
+			top: $window-nav-height * -1 !important;
+			left: unset;
+		}
+	}
+
+	@include media-breakpoint-up(md) { 
+
+		&__wrap {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: fit-content;
+			height: 120%;
+			pointer-events: none;
+		}
+
+		.gatsby-image-wrapper,
+		.glitch {
+
+			img {
+				width: fit-content !important;
+			}
+		}
+	}
+
+	
+}

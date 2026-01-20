@@ -1,4 +1,7 @@
 @use 'sass:math';
+
+$black: #000;
+$white: #fff;
 // Colors ( https://catppuccin.com/ ) 
 $rosewater: #f5e0dc;
 $flamingo: #f2cdcd;
@@ -50,6 +53,10 @@ $overlay0-latte: #9ca0b0;
 $base-latte: #eff1f5;
 $mantle-latte: #e6e9ef;
 $crust-latte: #dce0e8;
+
+$surface2-latte: #acb0be;
+$surface1-latte: #bcc0cc;
+$surface0-latte: #ccd0da;
 
 $background-color: $base-latte;
 $text-color: $text-latte;
