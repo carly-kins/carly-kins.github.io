@@ -9,6 +9,7 @@ const Hero = ( {hero, homepage} ) => {
 		<section className="hero">
 			<div className="container">
 				{homepage ? <Navigation/> : ''}
+				<div className="crt"></div>
 				<div className="window window-picture">
 					<div className="window-inside">
 						<nav className="window-nav">
@@ -51,8 +52,8 @@ const Hero = ( {hero, homepage} ) => {
 						</div>	
 					</div>
 				</div>
-
-				<Window/>
+{/* 
+				<Window/> */}
 
 			</div>
 			

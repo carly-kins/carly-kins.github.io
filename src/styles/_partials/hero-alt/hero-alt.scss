@@ -2,6 +2,14 @@ $block: hero;
 
 .#{$block} { 
 	$window-nav-height: 1.75rem;
+	position: relative;
+	background-image: url('../images/hero-background-unpixelated.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	// .crt {
+	// 	@include crt( $hero-height, $hero-min-height );
+	// }
 
 	.window {
 		margin: 0;
@@ -10,7 +18,8 @@ $block: hero;
 			position: relative;
 			max-width: 750px;
 			height: 60vh;
-			margin-left: auto;
+			margin: auto;
+			// mask: url('../images/homepage-hero-clipping.png');
 
 			.window-inside {
 				height: calc(100% - $window-nav-height);
@@ -29,6 +38,7 @@ $block: hero;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
+			z-index: 5;
 		}
 	}
 
@@ -41,7 +51,7 @@ $block: hero;
 		right: 0;
 		bottom: 0;
 		width: fit-content;
-		height: 90%;
+		height: 100%;
 		pointer-events: none;
 	}
 
@@ -51,8 +61,26 @@ $block: hero;
 		overflow: visible;
 
 		img {
-			top: $window-nav-height * -1 !important;
+			// top: $window-nav-height * -1 !important;
 			left: unset;
+		}
+	}
+
+	.glitch {
+		&:before {
+			position: absolute;
+			// top: $window-nav-height * -1 !important;
+			display: block;
+			height: 100%;
+			background-image: url('../images/hero-background.png');
+			background-repeat: no-repeat;
+			background-size: cover;
+			content: '';
+			inset: 0;
+			mask: url('../images/homepage-hero-clipping.png');
+			mask-size: cover;
+			mask-position: 50%;
+			mask-repeat: no-repeat;
 		}
 	}
 
@@ -72,6 +100,15 @@ $block: hero;
 
 			img {
 				width: fit-content !important;
+			}
+		}
+
+		.glitch {
+			&:before {
+
+				mask-size: contain;
+				mask-position: right;
+
 			}
 		}
 	}

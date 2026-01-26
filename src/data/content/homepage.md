@@ -2,7 +2,7 @@
 hero: 
     heading: Carly Wooten Gall
     subheading: "front-end developer. artist."
-    img: ../../images/homepage-hero-2.png
+    img: ../../images/homepage-hero-outline-black.png
     alt: A watercolor of lilies and lavender
 alert: 
     description: I am in the process of migrating my visual art portfolio to this page. If you are interested in my artwork, please check out <a href='https://www.carlyannewooten.com/gallery'>My Portfolio</a>. If you are interested in what I plan to add to this site in the coming months check out GITHUB LINK.
