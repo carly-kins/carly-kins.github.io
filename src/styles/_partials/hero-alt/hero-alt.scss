@@ -1,117 +1,118 @@
+$block: 'window';
 $block: hero;
 
 .#{$block} { 
 	$window-nav-height: 1.75rem;
 	position: relative;
-	background-image: url('../images/hero-background-unpixelated.jpeg');
 	background-repeat: no-repeat;
 	background-size: cover;
 
-	// .crt {
-	// 	@include crt( $hero-height, $hero-min-height );
-	// }
-
-	.window {
-		margin: 0;
-
-		&.window-picture {
-			position: relative;
-			max-width: 750px;
-			height: 60vh;
-			margin: auto;
-			// mask: url('../images/homepage-hero-clipping.png');
-
-			.window-inside {
-				height: calc(100% - $window-nav-height);
-				overflow: visible;
-			}
-
-            
-			.window-content {
-				//position: relative;
-				height: 100%;
-			}
-		}
-
-		&.window-title {
-			position: absolute;
-			top: 50%;
-			left: 50%;
-			transform: translate(-50%, -50%);
-			z-index: 5;
-		}
-	}
-
-	
-
-	
-
-	&__wrap {
+	&__image {
 		position: absolute;
-		right: 0;
-		bottom: 0;
-		width: fit-content;
-		height: 100%;
-		pointer-events: none;
+		top: 220px;
+		right: -70px;
+		left: -1000px;
+		height: 80%;
+
+		background: url('../images/portfolio-me.png');
+		// opacity: .5;
+		// background-color: red;
+		// background-color: red;
+		background-repeat: no-repeat;
+		background-position: right;
+		background-size: contain;
 	}
 
-	.gatsby-image-wrapper,
-	.glitch {
-		height: 100%;
-		overflow: visible;
+	&-window {
+		position: relative;
+		margin-top: $vertical-spacing;
+		// @include bt(3px, window, false);
+		margin-bottom: $vertical-spacing;
+		padding: rem-calc(6);
+		border: 1px solid $text;
+		border-radius: 4px;
+		background: url('../images/hero-background-unpixelated.jpeg');
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-size: cover; 
+		z-index: -1;
 
-		img {
-			// top: $window-nav-height * -1 !important;
-			left: unset;
-		}
-	}
-
-	.glitch {
-		&:before {
+		&:after {
 			position: absolute;
-			// top: $window-nav-height * -1 !important;
-			display: block;
-			height: 100%;
-			background-image: url('../images/hero-background.png');
-			background-repeat: no-repeat;
-			background-size: cover;
-			content: '';
 			inset: 0;
-			mask: url('../images/homepage-hero-clipping.png');
-			mask-size: cover;
-			mask-position: 50%;
-			mask-repeat: no-repeat;
+			background: linear-gradient(180deg,rgba($background-color, 100%) 0%, rgba($background-color, 0%) 100%);
+			content: '';
+			z-index: -1;
+		}
+
+		// ADD BOX SHADOW
+
+		&-inside {
+			height: 60vh;
+			min-height: 500px;
+		}
+
+		&-nav {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			height: rem-calc(28);
+			padding: 0 3px;
+			border: 1px solid $text;
+			//background-color: $lavender-latte;
+			color: $text;
+
+			&:before, &:after {
+				content: unset;
+			}
+
+			.hero-window-heading {
+				display: flex;
+				align-items: center;
+				justify-content: flex-start;
+				margin: 0;
+				padding: 0 3px;
+				font-family: $font-family-secondary;
+				font-size: 12px;
+			}
+		}
+
+		&-content {
+			height: calc(60vh - 3px - 40px - 36px);
+			padding: 20px;
 		}
 	}
 
 	@include media-breakpoint-up(md) { 
-
-		&__wrap {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			width: fit-content;
-			height: 120%;
-			pointer-events: none;
+		&__image {
+			// position: absolute;
+			// top: 25%;
+			// right: 0;
+			// bottom: 0;
+			// left: 8%;
+			// width: 100%;
+			// min-width: 500px;
+			top: 150px;
+			right: -130px;
+			left: -1000px;
+			height: 100%;
+			background: url('../images/portfolio-me.png');
+			// background-color: red;
+			background-repeat: no-repeat;
+			background-position: bottom right;
+			background-size: contain;
+			// opacity: .5;
 		}
 
-		.gatsby-image-wrapper,
-		.glitch {
-
-			img {
-				width: fit-content !important;
+		&-window { 
+			&-inside {
+				height: 75vh;
+				min-height: 650px;
 			}
 		}
-
-		.glitch {
-			&:before {
-
-				mask-size: contain;
-				mask-position: right;
-
-			}
-		}
+		
 	}
-
-	
 }
+
+
+

@@ -1,5 +1,4 @@
 import * as React from 'react';
-import Window from '../components/window';
 import { default as Button } from './button';
 
 const SectionHeader = ( { section } ) => { 
