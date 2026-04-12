@@ -66,7 +66,6 @@ $link-hover: $lavender-latte;
 
 
 // spacing:
-
 $spacing: (
 	'xs': rem-calc(4),
 	'sm': rem-calc(8),
@@ -87,6 +86,7 @@ $gutter: calc(spacing('2xl') * .5); // imports before bootstrap variables, so du
 // fonts
 $font-family-primary: 'Open Sans', sans-serif;
 $font-family-secondary: 'Fira Code', monospace;
+$font-family-tertiary: 'HikariByte', monospace; 
 $font-weights: (
 	'thin': 100,
 	'extra-light': 200,
@@ -101,7 +101,6 @@ $font-weights: (
 
 $font-size-base: 16;
 $font-size-small: rem-calc(14);
-$h1-font-size-xl: rem-calc($font-size-base * 3);
 $h1-font-size: rem-calc($font-size-base * 2.5);
 $h2-font-size: rem-calc($font-size-base * 2.5 );
 $h3-font-size: rem-calc($font-size-base * 1.75);

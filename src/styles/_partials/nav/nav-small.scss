@@ -31,13 +31,20 @@ $block: 'navbar';
 	&-toggler {
 		@include focus-state;
 		background-color: $background-color;
-        
+
 		&:hover,
 		&:focus {
 			transition: box-shadow 0.1s linear;
 			border-radius: $border-radius-sm;
 			outline: 0;
 			box-shadow: $focus-ring-box-shadow;
+		}
+
+		&-icon {
+			mask: var(--bs-navbar-toggler-icon-bg);
+			mask-repeat: no-repeat;
+			mask-size: contain;
+			background-color: $white;
 		}
 	}
 

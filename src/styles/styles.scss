@@ -2,7 +2,7 @@
 /* ------------------------------------*\
     #GLOBAL
 \*------------------------------------ */
-// @import "_global/fonts";
+@import '_global/fonts';
 @import '_global/mixins';
 @import '_global/variables';
 @import 'node_modules/bootstrap/scss/_functions';
@@ -22,9 +22,7 @@
     #SMALL
 \*------------------------------------ */
 @import '_partials/tags/tags-small';
-@import '_partials/hero/glitch';
-// @import '_partials/hero/hero-small';
-@import '_partials/hero-alt/hero-alt';
+@import '_partials/hero/hero-small';
 @import '_partials/nav/nav-small';
 @import '_partials/project-cards/project-cards-small';
 @import '_partials/button/button-small';
@@ -36,7 +34,8 @@
 /* ------------------------------------*\
     #MEDIUM
 \*------------------------------------ */
-// @import '_partials/hero/hero-medium';
+@import '_partials/tags/tags-medium';
+@import '_partials/hero/hero-medium';
 @import '_partials/nav/nav-medium';
 @import '_partials/logo-grid/logo-grid-medium';
 @import '_partials/project-cards/project-cards-medium';

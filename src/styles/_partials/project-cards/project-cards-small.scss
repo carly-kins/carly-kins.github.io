@@ -16,15 +16,17 @@ $block: 'project-cards';
 	} 
 
 	&__card {
-		// ADD BOX SHADOW
-		//@include sh(3px, default);
 		display: flex;
 		flex-direction: column;
 		margin-bottom: $component-spacing;
-		//padding: 3px;
-		background-color: $white;
+		border: 1px solid $text;
+		border-radius: 3px;
 		overflow: clip;
 		gap: $gutter;
+	}
+
+	&__footer {
+		margin-left: calc(spacing('xs') * -1);
 	}
 
 	&__text {
@@ -34,7 +36,7 @@ $block: 'project-cards';
 	&__img {
 		@include crt-overlay;
 		position: relative;
-		aspect-ratio: 1.2;
+		aspect-ratio: 1.9;
 
 		.gatsby-image-wrapper {
 			position: absolute;
@@ -62,7 +64,5 @@ $block: 'project-cards';
 
 	&__content {
 		padding: $grid-gutter-width;
-
 	}
-
 }

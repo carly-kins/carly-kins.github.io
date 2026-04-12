@@ -1,25 +1,44 @@
+$block: 'window';
 $block: hero;
 
 @include media-breakpoint-up(md) { 
-	.#{$block} {
+	.#{$block} { 
+		&__wrap {
+			height: 85%;
+			margin-bottom: calc($vertical-spacing * 2);
+			text-align: center;
 
-		.gatsby-image-wrapper {
-			background: linear-gradient(180deg,rgba($black, 0) 0%, rgba($background-color, 1) 80%);
+			h1,
+			p {
+				text-align: center;
+			}
 
-			picture {
-				left: 15%;
-	
-				img {
-					/* stylelint-disable-next-line declaration-no-important */
-					object-fit: scale-down !important;
-				}
+			p {
+				padding-right: 0;
+				font-size: $h3-font-size;
 			}
 		}
 
-		&__content {
-			h1 {
-				font-size: calc($h1-font-size-xl * 2);
+
+		&__image {
+			top: 150px;
+			right: -130px;
+			left: -1000px;
+			height: 100%;
+			background: url('../images/portfolio-me-finn.png');
+			background-repeat: no-repeat;
+			background-position: bottom right;
+			background-size: contain;
+		}
+
+		&-window { 
+			&-inside {
+				height: 75vh;
+				min-height: 650px;
 			}
 		}
 	}
 }
+
+
+

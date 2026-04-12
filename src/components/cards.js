@@ -17,7 +17,7 @@ const CardText = ( {card} ) => {
 	let cardInfo = card.project;
 	return (
 		<div className='project-cards__content'>
-			<h3>{cardInfo.title}</h3>
+			<h3>{cardInfo.title} </h3>
 			<p className='project-cards__badges'>
 				{ cardInfo.skills ? cardInfo.skills.map( ( skill, index ) => {
 					return <span key={index} className={`badge badge--${skill}`}>{skill}</span>;

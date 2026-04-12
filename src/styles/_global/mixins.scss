@@ -92,14 +92,6 @@
 // mixins for windows 95 effect https://codepen.io/gabriellewee/pen/MWqRZzp?editors=1100
 $g1: $surface1-latte; $g2: $background-color; $g3: $surface2-latte; $wh: $white; $bl: $black; $bg: $white;
 
-@mixin ch($c: $g2, $s: 1px, $b: $wh) {
-	background-color: $b;
-	background-image: linear-gradient(45deg, $c 25%, transparent 25%, transparent 75%, $c 75%, $c), 
-		linear-gradient(45deg, $c 25%, transparent 25%, transparent 75%, $c 75%, $c);
-	background-position: 0 0, $s $s;
-	background-size: $s*2 $s*2;
-}
-
 @mixin bt($w, $d: default, $c: true) {
 	@include sh($w, $d);
 
@@ -137,10 +129,4 @@ $g1: $surface1-latte; $g2: $background-color; $g3: $surface2-latte; $wh: $white;
 	} @else if $d == inset {
 		box-shadow: inset #{-$w*.5} #{-$w*.5} 0 0 $wh, inset #{$w*.5} #{$w*.5} 0 0 $g3;
 	} 
-}
-
-@mixin nb {
-	text-overflow: ellipsis;
-	white-space: nowrap;
-	overflow: hidden;
 }

@@ -1,18 +1,35 @@
 $block: 'logo-grid';
-.#{$block} {
+.#{$block} { 
+	position: relative;
 	margin-bottom: $vertical-spacing;
+	background: url('../images/hero-background-unpixelated.jpeg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding-block: $vertical-spacing;
 	$gap: calc($gutter * 2);
+
+	&:after {
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(180deg, rgba($background-color, 100%) 0%, rgba($background-color, 20%) 50%, rgba($background-color, 100%) 100%);
+		content: '';
+	}
+
+	.container {
+		position: relative;
+		z-index: 1;
+	}
 
 	p {
 		margin-bottom: 0;
-
 	}
 
 	&--wrap {
 		display: flex;
 		flex-wrap: wrap;
 		gap: $gap;
-		justify-content: center;
+		justify-content: space-between;
 	}
 
 	&__heading {
@@ -33,7 +50,8 @@ $block: 'logo-grid';
 		width: 100%;
 		margin: 0 auto;
 		padding: spacing('md');
-
+		border-radius: 4px;
+		background-color: $mantle-latte;
 	
 		picture,
 		img {
@@ -48,7 +66,6 @@ $block: 'logo-grid';
 
 	&__description {
 		margin-top: 0.5rem;
-		color: $surface0;
 		font-size: 0.85rem;
 	}
 }
