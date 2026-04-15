@@ -19,4 +19,4 @@ project:
     featuredImage: ../../images/nebraska.png
 ---
 
-TODO: Add more information her fdsafsd e
+Implemented the new design system for the State of Nebraska, with a focus on accessibility, usability, and performance. Created an open-source baseline for the State to use across different web products. 

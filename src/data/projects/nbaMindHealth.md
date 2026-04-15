@@ -16,4 +16,4 @@ project:
     featuredImage: ../../images/mind-gym.png
 ---
 
-TODO: Add more information hereffdsaF
+Led prototyping and end-to-end technical implementation of NBA Mind Health's interactive 'Mind Gym,' a cross-platform interactive experience for spectators at the _2024 NBA Allstar Game_. Reused the architecture to build the award-winning 'Join the Mind Health Squad' quiz (dotComm Gold, NY Digital Gold).

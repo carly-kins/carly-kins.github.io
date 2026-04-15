@@ -18,4 +18,4 @@ project:
     featuredImage: ../../images/phoenix.png
 ---
 
-TODO: Add more information here FDSAD
+Managed the front-end implementation of the City of Phoenix's website redesign. Focused on creating a 508 Compliant, mobile-first experience. Created a library of reusable components for use across the website. Implemented a custom, scalable framework to display and filter items such as search results, news articles, and events as a single page application. Created the framework to be easily scaled to other projects.  
