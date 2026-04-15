@@ -3,7 +3,7 @@ hero:
     heading: Carly Wooten Gall
     subheading: "front-end developer. artist."
 alert: 
-    description: I am in the process of migrating my visual art portfolio to this page. If you are interested in my artwork, please check out <a href='https://www.carlyannewooten.com/gallery'>My Portfolio</a>. If you are interested in what I plan to add to this site in the coming months check out GITHUB LINK.
+    description: I am in the process of migrating my visual art portfolio to this page. If you are interested in my artwork, please check out <a href='https://www.carlyannewooten.com/gallery'>my portfolio</a>. If you are interested in what I plan to add to this site in the coming months check out <a href='https://github.com/carly-kins/carly-kins.github.io/tree/main'>my README</a>.
 sections: 
   - heading: About Me
     id: "about"
