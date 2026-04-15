@@ -1,14 +1,14 @@
 $block: 'footer';
 .#{$block} {
-	position: sticky;
 	bottom: 0;
 	margin-top: $vertical-spacing;
 	z-index: 999;
 
 	.container{
 		display: flex;
-		flex-direction: column;
 		align-items: center;
+		width: 100%;
+		max-width: 1800px;
 	}
 
 	.#{$block}-nav {
@@ -22,7 +22,6 @@ $block: 'footer';
 		justify-content: center;
 		width: 100%;
 		margin-bottom: 0;
-		margin-left: $gutter;
 		padding: 0;
 		list-style: none;
 
@@ -67,15 +66,18 @@ $block: 'footer';
 		}
 
 		.time {
-			@include nb;
-			@include sh(3px, inset);
 			display: grid;
 			width: 100px;
 			height: rem-calc(44);
 			margin: 0 3px;
 			margin-right: $gutter;
 			margin-left: auto;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
 			place-items: center;
+
+			@include sh(3px, inset);
 		}
 	}
 }

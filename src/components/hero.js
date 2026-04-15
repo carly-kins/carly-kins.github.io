@@ -1,24 +1,24 @@
 import * as React from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import Navigation from './nav';
 
-const Hero = ( {hero, homepage} ) => {
-	let img = getImage( hero.img?.childImageSharp?.gatsbyImageData );
+const Hero = ( {hero, homepage, notFound} ) => {
 	return (
-		<section className="hero">
-			{homepage ? <Navigation/> : ''}
-			<div className='crt'></div>
-			<div className="hero__wrap">
-				<div className='glitch glitch--style-1'>
-					{/*TODO: Figure out how to get this effect without needing to import the image 3 times*/}
-					<GatsbyImage className='glitch__img' image={img} alt={hero.alt} />
-					<GatsbyImage className='glitch__img' aria-hidden='true' image={img} />
-					<GatsbyImage className='glitch__img' aria-hidden='true' image={img} />
-				</div>
-				
-				<div className='hero__content container'>
-					<h1>{hero.heading}</h1>
-					<p>{hero.subheading}</p>
+		<section className={notFound ? 'hero hero--404' : 'hero'}>
+			<div className="container">
+				{homepage && !notFound? <Navigation/> : ''}
+				<div className="hero-window window-picture">
+					<div className="hero-window-inside">
+						<nav className="hero-window-nav">
+							<p className='hero-window-heading'>
+								<span>{notFound ? '404' : 'welcome'}</span>
+							</p>
+						</nav>
+						<div className='hero__image'></div>
+						<div className="hero__wrap">
+							<h1>{ hero.heading }</h1>
+							<p dangerouslySetInnerHTML={{ __html: hero.subheading }}></p>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>

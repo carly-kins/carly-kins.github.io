@@ -14,8 +14,8 @@ project:
         - AJAX-REST
         - Bootstrap
         - AEM
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut mattis mauris quis sem condimentum, eget ultricies felis laoreet. Proin vitae ex tortor. Phasellus nisi metus, luctus sed arcu eu, lacinia dictum eros. Sed mattis porttitor tristique. Nunc accumsan ac tortor in eleifend. Nulla tincidunt mauris vel suscipit imperdiet. Cras pulvinar ipsum non risus sodales condimentum. Cras tincidunt tincidunt semper. Sed a magna risus. Nullam lobortis, turpis in laoreet blandit, urna mauris dignissim lorem, pretium interdum arcu eros ac lorem. Integer vitae arcu et lorem vehicula pulvinar vel id dui. Nunc maximus enim in lacus bibendum dignissim. Donec ultricies pharetra interdum. Ut luctus mi quis lobortis pellentesque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.'
+    description: ''
     featuredImage: ../../images/phoenix.png
 ---
 
-TODO: Add more information here
+Managed the front-end implementation of the City of Phoenix's website redesign. Focused on creating a 508 Compliant, mobile-first experience. Created a library of reusable components for use across the website. Implemented a custom, scalable framework to display and filter items such as search results, news articles, and events as a single page application. Created the framework to be easily scaled to other projects.  

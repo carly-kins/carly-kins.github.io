@@ -3,10 +3,10 @@ $block: 'project-cards';
 
 @include media-breakpoint-up(lg) { 
 	.#{$block} {
-		$img-size: 40%;
+		$img-size: 45%;
 		$text-size: 100% - $img-size;
 		$width: calc($text-size - $gutter);
-		$gradient-width: 140px;
+		$gradient-width: 120px;
 
 		&__card {
 			flex-direction: row;
@@ -17,14 +17,13 @@ $block: 'project-cards';
 					&:before {
 						right: calc( ($gradient-width + $gutter) * -1 );
 						left: auto;
-						background: linear-gradient(270deg,rgba($black, 0) 0%, rgba($white, 1) 100%);
+						background: linear-gradient(270deg,rgba($black, 0) 0%, rgba($background-color, 1) 100%);
 					}
 				}
 
 				.#{$block}__footer {
 					justify-content: flex-start;
 				}
-
 			}
 		}
 
@@ -46,6 +45,7 @@ $block: 'project-cards';
 		&__footer {
 			display: flex;
 			justify-content: flex-end;
+			margin-right: calc(spacing('xs') * -1);
 		}
 
 		&__content {
@@ -62,7 +62,7 @@ $block: 'project-cards';
 				bottom: 0;
 				left: calc( ($gradient-width + $gutter) * -1 );
 				width: $gradient-width;
-				background: linear-gradient(90deg,rgba($black, 0) 0%, rgba($white, 1) 100%);
+				background: linear-gradient(90deg,rgba($black, 0) 0%, rgba($background-color, 1) 100%);
 				content: '';
 				z-index: 3;
 			}

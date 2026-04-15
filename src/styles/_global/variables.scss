@@ -1,4 +1,7 @@
 @use 'sass:math';
+
+$black: #000;
+$white: #fff;
 // Colors ( https://catppuccin.com/ ) 
 $rosewater: #f5e0dc;
 $flamingo: #f2cdcd;
@@ -51,15 +54,18 @@ $base-latte: #eff1f5;
 $mantle-latte: #e6e9ef;
 $crust-latte: #dce0e8;
 
-$background-color: $base-latte;
-$text-color: $text-latte;
+$surface2-latte: #acb0be;
+$surface1-latte: #bcc0cc;
+$surface0-latte: #ccd0da;
+
+$background-color: $crust;
+$text-color: $text;
 $link-hover: $lavender-latte;
 
 // window colors 
 
 
 // spacing:
-
 $spacing: (
 	'xs': rem-calc(4),
 	'sm': rem-calc(8),
@@ -72,7 +78,7 @@ $spacing: (
 	'5xl': rem-calc(36),
 	'6xl': rem-calc(40)
 );
-$vertical-spacing: calc(spacing('6xl') * 1.75);
+$vertical-spacing: calc(spacing('6xl') * 2);
 $component-spacing: spacing('4xl');
 $header-spacing: spacing('2xl');
 $gutter: calc(spacing('2xl') * .5); // imports before bootstrap variables, so duplicating here for ease of use
@@ -80,6 +86,7 @@ $gutter: calc(spacing('2xl') * .5); // imports before bootstrap variables, so du
 // fonts
 $font-family-primary: 'Open Sans', sans-serif;
 $font-family-secondary: 'Fira Code', monospace;
+$font-family-tertiary: 'HikariByte', monospace; 
 $font-weights: (
 	'thin': 100,
 	'extra-light': 200,
@@ -94,7 +101,6 @@ $font-weights: (
 
 $font-size-base: 16;
 $font-size-small: rem-calc(14);
-$h1-font-size-xl: rem-calc($font-size-base * 3);
 $h1-font-size: rem-calc($font-size-base * 2.5);
 $h2-font-size: rem-calc($font-size-base * 2.5 );
 $h3-font-size: rem-calc($font-size-base * 1.75);
@@ -103,5 +109,5 @@ $h5-font-size: rem-calc($font-size-base * 1.25);
 $h6-font-size: rem-calc($font-size-base );
 
 $focus-ring-box-shadow: 0 0 0 .25rem rgba($link-hover, .75);
-$hero-height: 72vh;
+$hero-height: 100vh;
 $hero-min-height: 500px;

@@ -1,6 +1,7 @@
 body {
 	background-color:  $background-color; 
 	font-family: $font-family-primary;
+	overflow-x: hidden;
 }
 
 section {
@@ -12,27 +13,31 @@ code {
 }
 
 h1 {
-	font-size: $h1-font-size;
-}
-
-h2 {
-	font-size: $h2-font-size;
-}
-
-h3 {
 	font-size: $h3-font-size;
 }
 
-h4 {
+h2 {
+	font-size: $h3-font-size;
+}
+
+h3 {
 	font-size: $h4-font-size;
 }
 
-h5 {
+h4 {
 	font-size: $h5-font-size;
+}
+
+h5 {
+	font-size: $h6-font-size;
 }
 
 h6 {
 	font-size: $h6-font-size;
+}
+
+.container {
+	width: 90%;
 }
 
 
@@ -52,6 +57,16 @@ h6 {
 		color: $surface0;
 	}
 
+	&--USWDS {
+		background-color:  $blue; 
+		color: $surface0;
+	}
+
+	&--React {
+		background-color:  $teal; 
+		color: $surface0;
+	}
+
 	&--SCSS {
 		background-color:  $pink; 
 		color: $surface0;
@@ -59,7 +74,7 @@ h6 {
 
 	&--AJAX-REST {
 		background-color:  $text-color; 
-		color: $white;
+		color: $surface0;
 	}
 
 	&--Bootstrap {

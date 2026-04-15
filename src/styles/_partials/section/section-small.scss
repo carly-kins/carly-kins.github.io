@@ -1,25 +1,32 @@
 $block: 'section';
 .#{$block} {
 	position: relative;
+	margin-bottom: $vertical-spacing;
 	z-index: 999;
-
-	&--about {
-		top: calc($vertical-spacing * -1 * 2);
-		margin-bottom: calc($vertical-spacing * -1 * 2);
-	}
 
 	&-header {
 		margin-bottom: 0;
 
 		&__wrap {
 			display: flex;
-			align-items: center;
 			justify-content: space-between;
 			margin-bottom: $header-spacing;
 		}
-	}
 
-	&-description {
-		margin-bottom: $vertical-spacing;
+		&__about {	
+			position: relative;	
+			background: linear-gradient(to top, rgba($background-color, 100%) 0%, rgba($background-color, 40%) 100%);
+
+			&:before {
+				position: absolute;
+				top: -40px;
+				left: 0;
+				width: 100%;
+				height: 40px;
+				background: linear-gradient(to top, rgba($background-color, 40%) 0%, rgba($background-color, 0%) 100%);
+				content: '';
+
+			}
+		}
 	}
 }
