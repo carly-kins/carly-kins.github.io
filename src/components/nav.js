@@ -54,7 +54,7 @@ const Navigation = ( homepage ) => {
 				
 				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
 				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav BsPrefixRefForwardingComponent="ul" className="me-auto">
+					<Nav className="me-auto">
 						<ul className="navbar-nav">
 							{navItems.map( ( navItem, index ) => (
 								<li className="nav-item" key={index}> <Nav.Link href={navItem.url}>{navItem.title}</Nav.Link></li>

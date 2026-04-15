@@ -83,6 +83,7 @@ export const pageQuery = graphql`
   ) {
     edges {
       node {
+        html
         frontmatter {
           slug
           project {

@@ -7,6 +7,30 @@ $block: hero;
 	background-repeat: no-repeat;
 	background-size: cover;
 
+	&--404 {
+		margin-top: $vertical-spacing;
+
+		a {
+			color: $text-color;
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+			}
+		}
+
+		.#{$block}__wrap {
+			height: 85%;
+			text-align: center;
+
+
+			p {
+				padding-right: 0;
+				text-align: center;
+			}
+		}
+	}
+
 	&__wrap {
 		position: relative;
 		display: flex;
@@ -44,6 +68,10 @@ $block: hero;
 		background-position: right;
 		background-size: contain;
 		z-index: 2;
+
+		.hero--404 & {
+			display: none;
+		}
 	}
 
 	&-window {

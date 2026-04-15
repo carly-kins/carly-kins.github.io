@@ -1,16 +1,16 @@
 import * as React from 'react';
-import { Link } from 'gatsby';
+import '../styles/styles.scss';
+import Hero from '../components/hero';
+import { graphql } from 'gatsby';
 import '../styles/styles.scss';
 
+const NotFoundPage = ( { data } ) => {
 
-const NotFoundPage = () => {
+	const hero = data.homepage.frontmatter.hero;
+
 	return (
-		<main>
-			<h1>Page not found</h1>
-			<p>
-        Sorry 😔, we couldn’t find what you were looking for.
-				<Link to="/">Go home</Link>.
-			</p>
+		<main className='container'>
+			<Hero homepage={true} hero={hero} notFound={true} />
 		</main>
 	);
 };
@@ -18,3 +18,22 @@ const NotFoundPage = () => {
 export default NotFoundPage;
 
 export const Head = () => <title>Not found</title>;
+
+export const pageQuery = graphql`
+ query indexPageQuery {
+  site {
+    siteMetadata {
+      title
+      description
+    }
+  }
+  homepage: markdownRemark(fileAbsolutePath: {regex: "/404.md/"}) {
+    html
+    frontmatter {
+      hero {
+        heading
+        subheading
+      }
+    }
+  }
+}`;
