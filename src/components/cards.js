@@ -28,8 +28,8 @@ const CardText = ( {card, cardText} ) => {
 			<div className='project-cards__footer'>
 				{ cardInfo.projectLink || cardInfo.githubLink ? 
 					<div className='project-cards__footer'>
-						{ cardInfo.projectLink ? <Button link={cardInfo.projectLink} text={'Visit Site'} visuallyHidden={true} type={'external'} icon={true} /> : ''}
-						{ cardInfo.githubLink ? <Button link={cardInfo.githubLink} text={'Visit GitHub'} visuallyHidden={true} type={'github'} icon={true} />: ''}
+						{ cardInfo.projectLink ? <Button link={cardInfo.projectLink} text={`Learn more about ${cardInfo.title}`} visuallyHidden={true} type={'external'} icon={true} /> : ''}
+						{ cardInfo.githubLink ? <Button link={cardInfo.githubLink} text={`Visit the repo on GitHub for ${cardInfo.title}`} visuallyHidden={true} type={'github'} icon={true} />: ''}
 					</div>
 					: ''}
 			</div>

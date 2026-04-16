@@ -2,7 +2,7 @@
 slug: phoenix
 type: 'project'
 project:
-    title: Phoenix
+    title: Phoenix.gov
     projectLink: https://www.phoenix.gov/
     logo: ''
     highlight: true
