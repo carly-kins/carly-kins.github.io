@@ -1,11 +1,9 @@
 import * as React from 'react';
-import Navigation from './nav';
 
-const Hero = ( {hero, homepage, notFound} ) => {
+const Hero = ( {hero, notFound} ) => {
 	return (
 		<section className={notFound ? 'hero hero--404' : 'hero'}>
 			<div className="container">
-				{homepage && !notFound? <Navigation/> : ''}
 				<div className="hero-window window-picture">
 					<div className="hero-window-inside">
 						<nav className="hero-window-nav">

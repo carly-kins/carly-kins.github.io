@@ -28,8 +28,13 @@ $block: 'navbar';
 		}
 	}
 
+	&-nav {
+		padding-left: var(--bs-navbar-toggler-padding-x);
+	}
+
 	&-toggler {
 		@include focus-state;
+		border: 0;
 		background-color: $background-color;
 
 		&:hover,

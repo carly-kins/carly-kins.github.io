@@ -40,6 +40,7 @@ My personal Portfolio built with Gatsby. I am going to try to add features to th
 
 ## 📒 TODOS
 
+- Style skipnav
 - When ready to add back in analytics: https://www.gatsbyjs.com/plugins/gatsby-plugin-google-gtag/
 - Add social media open graph tags 
 - Add a filter for projects/artworks

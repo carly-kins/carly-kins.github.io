@@ -50,3 +50,5 @@ When working, I strive to fulfill 3 main principles:
 - *Collaboration*: I am continually learning as I work - the best way to learn is to work with other people 
 
 Please enjoy my little corner of the internet! 
+
+_All art on this site was made by myself without the use of generative AI._
