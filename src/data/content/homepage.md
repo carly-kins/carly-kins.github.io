@@ -45,7 +45,7 @@ My name is Carly, and I am a Front-End Engineer and Artist.
 Previously, I was a Digital Project Manager, but I missed _creating_ something as I worked. I quickly fell in love with code after seeing the incredible products that my colleagues were making on the web. Through self-study and on the job training, I transitioned to being a developer in 2022. 
 
 When working, I strive to fulfill 3 main principles: 
-- *Artisinal Coding*: I see development as an extenstion of my art practice. I love to create things and solve problems, whether I'm using paint or code. 
+- *Artisanal Coding*: I see development as an extenstion of my art practice. I love to create things and solve problems, whether I'm using paint or code. 
 - *Commitment to Accessibility*: The things I make should be accessible to as many people as possible. 
 - *Collaboration*: I am continually learning as I work - the best way to learn is to work with other people 
 
