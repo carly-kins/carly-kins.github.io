@@ -50,19 +50,21 @@ const Navigation = ( homepage ) => {
 	// TODO: add skipnav
 	// add a button to reduce animations
 		return (
-			<Navbar collapseOnSelect expand="md" className="bg-body-tertiary">
-				
-				<Navbar.Toggle aria-controls="responsive-navbar-nav" />
-				<Navbar.Collapse id="responsive-navbar-nav">
-					<Nav className="me-auto">
-						<ul className="navbar-nav">
-							{navItems.map( ( navItem, index ) => (
-								<li className="nav-item" key={index}> <Nav.Link href={navItem.url}>{navItem.title}</Nav.Link></li>
-							) )}
-						</ul>
-					</Nav>
-				</Navbar.Collapse>
-				{/* <button className="btn button" onClick={toggleAnimations}>
+			<>
+				<a className="visually-hidden-focusable container" href="#content">Skip to main content</a>
+				<Navbar collapseOnSelect expand="md" className="bg-body-tertiary container">
+					<Navbar.Toggle aria-controls="responsive-navbar-nav" />
+					<Navbar.Collapse id="responsive-navbar-nav">
+						<Nav className="me-auto">
+							<ul className="navbar-nav">
+								{navItems.map( ( navItem, index ) => (
+									<li className="nav-item" key={index}> <Nav.Link href={navItem.url}>{navItem.title}</Nav.Link></li>
+								) )}
+							</ul>
+						</Nav>
+					</Navbar.Collapse>
+					{/* TODO: determine if I still need this
+					 <button className="btn button" onClick={toggleAnimations}>
 						<span>
 							{animationsEnabled ? 
 								<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3"><path d="M520-200v-560h240v560H520Zm-320 0v-560h240v560H200Zm400-80h80v-400h-80v400Zm-320 0h80v-400h-80v400Zm0-400v400-400Zm320 0v400-400Z"/></svg> 
@@ -73,7 +75,8 @@ const Navigation = ( homepage ) => {
 						<span className='visually-hidden'>{animationsEnabled ? 'Disable Animations' : 'Enable Animations'}</span>
 					</button> */}
 				
-			</Navbar>
+				</Navbar>
+			</>
 		);
 };
 

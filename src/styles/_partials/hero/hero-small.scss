@@ -88,6 +88,10 @@ $block: hero;
 		background-size: cover; 
 		z-index: 2;
 
+		@supports (hanging-punctuation: first) { // safari has a bug with background-attachment fixed https://css-tricks.com/the-fixed-background-attachment-hack/
+			background-attachment: scroll;
+		}
+
 		&:after {
 			position: absolute;
 			inset: 0;

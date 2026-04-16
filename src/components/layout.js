@@ -2,11 +2,11 @@ import * as React from 'react';
 import Navigation from './nav';
 import Footer from './footer';
 
-const Layout = ( { children, homepage } ) => {
+const Layout = ( { children } ) => {
 	return (
 		<>
-			{!homepage ? <Navigation /> : ''}
-			<main>
+			<Navigation />
+			<main id="content">
 				{children}
 			</main>
 			<Footer />
